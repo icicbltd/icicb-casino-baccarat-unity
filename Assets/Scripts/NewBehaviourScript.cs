@@ -38,7 +38,7 @@ public class NewBehaviourScript : MonoBehaviour
     public Texture[] Spades = new Texture[13];
     public Texture[] Diamonds = new Texture[13];
     public Texture[] Clubs = new Texture[13];
-    private string BaseUrl = "http://192.168.115.172:5000";
+    private string BaseUrl = "http://153.92.214.184";
     private int flag = 0;
     BetPlayer __player;
     void Start()
@@ -46,7 +46,8 @@ public class NewBehaviourScript : MonoBehaviour
         betAmount = 0f;
         BetAmount.text = betAmount.ToString("F2");
         disable_clear.interactable = false;
-        color_button[0].GetComponent<Image>().color = Color.blue;
+        color.a = 0.3f;
+        color_button[0].GetComponent<Image>().color = color;
         __player = new BetPlayer();
 #if UNITY_WEBGL == true && UNITY_EDITOR == false
         GameReady("Ready");
@@ -383,7 +384,9 @@ public class NewBehaviourScript : MonoBehaviour
     public void mark1()
     {
         pokerMark = 5;
-        color_button[0].GetComponent<Image>().color = Color.blue;
+
+        color.a = 0.3f;
+        color_button[0].GetComponent<Image>().color = color;
         color_button[1].GetComponent<Image>().color = Color.white;
         color_button[2].GetComponent<Image>().color = Color.white;
         color_button[3].GetComponent<Image>().color = Color.white;
@@ -394,7 +397,8 @@ public class NewBehaviourScript : MonoBehaviour
     {
         pokerMark = 10;
         color_button[0].GetComponent<Image>().color = Color.white;
-        color_button[1].GetComponent<Image>().color = Color.blue;
+        color.a = 0.3f;
+        color_button[1].GetComponent<Image>().color = color;
         color_button[2].GetComponent<Image>().color = Color.white;
         color_button[3].GetComponent<Image>().color = Color.white;
         color_button[4].GetComponent<Image>().color = Color.white;
@@ -405,7 +409,8 @@ public class NewBehaviourScript : MonoBehaviour
         pokerMark = 20;
         color_button[0].GetComponent<Image>().color = Color.white;
         color_button[1].GetComponent<Image>().color = Color.white;
-        color_button[2].GetComponent<Image>().color = Color.blue;
+        color.a = 0.3f;
+        color_button[2].GetComponent<Image>().color = color;
         color_button[3].GetComponent<Image>().color = Color.white;
         color_button[4].GetComponent<Image>().color = Color.white;
         color_button[5].GetComponent<Image>().color = Color.white;
@@ -416,7 +421,8 @@ public class NewBehaviourScript : MonoBehaviour
         color_button[0].GetComponent<Image>().color = Color.white;
         color_button[1].GetComponent<Image>().color = Color.white;
         color_button[2].GetComponent<Image>().color = Color.white;
-        color_button[3].GetComponent<Image>().color = Color.blue;
+        color.a = 0.3f;
+        color_button[3].GetComponent<Image>().color = color;
         color_button[4].GetComponent<Image>().color = Color.white;
         color_button[5].GetComponent<Image>().color = Color.white;
     }
@@ -427,7 +433,8 @@ public class NewBehaviourScript : MonoBehaviour
         color_button[1].GetComponent<Image>().color = Color.white;
         color_button[2].GetComponent<Image>().color = Color.white;
         color_button[3].GetComponent<Image>().color = Color.white;
-        color_button[4].GetComponent<Image>().color = Color.blue;
+        color.a = 0.3f;
+        color_button[4].GetComponent<Image>().color = color;
         color_button[5].GetComponent<Image>().color = Color.white;
     }
     public void mark6()
@@ -438,7 +445,9 @@ public class NewBehaviourScript : MonoBehaviour
         color_button[2].GetComponent<Image>().color = Color.white;
         color_button[3].GetComponent<Image>().color = Color.white;
         color_button[4].GetComponent<Image>().color = Color.white;
-        color_button[5].GetComponent<Image>().color = Color.blue;
+        color.a = 0.3f;
+
+        color_button[5].GetComponent<Image>().color = color;
     }
     public void BET()
     {

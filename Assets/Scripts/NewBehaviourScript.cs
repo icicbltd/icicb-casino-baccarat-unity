@@ -27,7 +27,6 @@ public class NewBehaviourScript : MonoBehaviour
     private float tie_mark = 0.0f;
     private float banker_mark = 0.0f;
     private Color color = Color.white;
-    public GameObject Poker;
     public GameObject[] color_button = new GameObject[6];
     public GameObject[] players = new GameObject[3];
     public Texture[] marks = new Texture[6];
